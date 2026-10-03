@@ -3,94 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lịch họp công ty</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 40px;
-            background-color: #f8f9fa;
-        }
-
-        h1 {
-            text-align: center;
-            color: #1a365d;
-            margin-bottom: 25px;
-        }
-
-        table {
-            width: 75%;
-            margin: 0 auto;
-            border-collapse: collapse;
-            background-color: #ffffff;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
-        }
-
-        th, td {
-            border: 1px solid #cbd5e1;
-            padding: 12px 16px;
-            text-align: center;
-        }
-
-        th {
-            background-color: #0284c7;
-            color: #ffffff;
-            font-size: 16px;
-        }
-
-        tr:nth-child(even) {
-            background-color: #f8fafc;
-        }
-
-        .highlight {
-            background-color: #e0f2fe;
-            font-weight: 500;
-        }
-    </style>
+    <title>Thực hành Danh sách trong CSS</title>
+    <!-- Liên kết file CSS bên ngoài -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Tiêu đề h1 theo yêu cầu -->
-    <h1>Lịch họp công ty</h1>
+    <h1>Thực Hành Định Kiểu Danh Sách Bằng CSS</h1>
 
-    <!-- Bảng thông tin lịch họp sử dụng rowspan và colspan -->
-    <table>
-        <thead>
-            <tr>
-                <th>Ngày</th>
-                <th>Giờ</th>
-                <th>Nội dung cuộc họp</th>
-            </tr>
-        </thead>
-        <tbody>
-            <!-- Ngày thứ nhất: có 2 cuộc họp -> dùng rowspan="2" ở cột Ngày -->
-            <tr>
-                <td rowspan="2" class="highlight">Thứ Hai (05/10)</td>
-                <td>08:30 - 10:00</td>
-                <td>Họp giao ban đầu tuần toàn thể công ty</td>
-            </tr>
-            <tr>
-                <td>14:00 - 16:00</td>
-                <td>Họp rà soát tiến độ dự án Web</td>
-            </tr>
+    <!-- Mục 2: list-style-type vuông -->
+    <div class="card">
+        <h2>2. Kiểu đánh dấu hình vuông (Square)</h2>
+        <ul class="list-square">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Git</li>
+        </ul>
+    </div>
 
-            <!-- Ngày thứ hai: cuộc họp kéo dài cả ngày/nhiều khung giờ gộp cột -> dùng colspan="2" -->
-            <tr>
-                <td class="highlight">Thứ Ba (06/10)</td>
-                <td colspan="2">Cả ngày (09:00 - 17:00): Hội thảo đào tạo công nghệ mới cho nhân viên</td>
-            </tr>
+    <!-- Mục 3: list-style-type số La Mã hoa -->
+    <div class="card">
+        <h2>3. Kiểu đánh số La Mã viết hoa (Upper Roman)</h2>
+        <ol class="list-roman">
+            <li>Học HTML</li>
+            <li>Học CSS</li>
+            <li>Học JavaScript</li>
+            <li>Học Git</li>
+        </ol>
+    </div>
 
-            <!-- Ngày thứ ba: thêm một ngày có 2 phiên họp -->
-            <tr>
-                <td rowspan="2" class="highlight">Thứ Tư (07/10)</td>
-                <td>09:30 - 11:30</td>
-                <td>Họp với đối tác khách hàng</td>
-            </tr>
-            <tr>
-                <td>15:00 - 17:00</td>
-                <td>Tổng kết đánh giá hiệu suất quý</td>
-            </tr>
-        </tbody>
-    </table>
+    <!-- Mục 4: list-style-image (dùng icon SVG/ảnh online làm bullet) -->
+    <div class="card">
+        <h2>4. Dùng hình ảnh làm dấu đánh dấu</h2>
+        <ul class="list-image">
+            <li>Visual Studio Code</li>
+            <li>Google Chrome</li>
+            <li>GitHub</li>
+            <li>Git</li>
+        </ul>
+    </div>
+
+    <!-- Mục 5: list-style-position outside và inside -->
+    <div class="card">
+        <h2>5. Vị trí dấu đánh dấu (Outside vs Inside)</h2>
+        <p><strong>Outside (mặc định - dấu nằm ngoài khối):</strong></p>
+        <ul class="list-outside">
+            <li>Mục danh sách A</li>
+            <li>Mục danh sách B</li>
+        </ul>
+
+        <p><strong>Inside (dấu thụt vào trong cùng khối chữ):</strong></p>
+        <ul class="list-inside">
+            <li>Mục danh sách A</li>
+            <li>Mục danh sách B</li>
+        </ul>
+    </div>
+
+    <!-- Mục 6: Thuộc tính rút gọn list-style -->
+    <div class="card">
+        <h2>6. Thuộc tính rút gọn list-style</h2>
+        <ul class="list-shorthand">
+            <li>Kiểu đánh dấu circle</li>
+            <li>Vị trí inside</li>
+            <li>Gọn gàng trong 1 dòng lệnh</li>
+        </ul>
+    </div>
+
+    <!-- Mục 7: Danh sách với màu sắc, margin, padding -->
+    <div class="card">
+        <h2>7. Danh sách với màu sắc và khoảng cách</h2>
+        <ul class="list-colored">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Python</li>
+        </ul>
+    </div>
+
+    <!-- Mục 8: Bài tập tổng hợp: Lộ trình học lập trình Web -->
+    <div class="card">
+        <h2>8. Lộ trình học lập trình Web (Tổng hợp)</h2>
+        <ul class="roadmap">
+            <li>HTML: Nền tảng xây dựng khung cấu trúc website</li>
+            <li>CSS: Định dạng giao diện, bố cục và màu sắc thẩm mỹ</li>
+            <li>JavaScript: Thêm tính tương tác linh hoạt cho ứng dụng</li>
+            <li>Git: Quản lý phiên bản mã nguồn chuyên nghiệp</li>
+            <li>GitHub: Lưu trữ, làm việc nhóm và chia sẻ dự án</li>
+        </ul>
+    </div>
 
 </body>
 </html>
