@@ -1,56 +1,369 @@
-/* 1. Thiết lập màu nền (background-color) cho toàn bộ trang web */
-body {
-    background-color: #e2e8f0;
-    font-family: Arial, Helvetica, sans-serif;
+/* ========================================================
+   1. RESET CSS VÀ THIẾT LẬP CHUNG
+   ======================================================== */
+* {
     margin: 0;
-    padding: 40px 20px;
-    color: #1e293b;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.main-container {
-    max-width: 750px;
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f0f2f5;
+    color: #333333;
+    line-height: 1.5;
+    padding-top: 70px; /* Bù trừ chiều cao Fixed Header */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Loại bỏ gạch chân mặc định của toàn bộ liên kết */
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.2s ease-in-out;
+}
+
+/* ========================================================
+   2. HEADER CỐ ĐỊNH (FIXED HEADER)
+   ======================================================== */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #1e293b;
+    color: #ffffff;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.header-container {
+    max-width: 1240px;
     margin: 0 auto;
-    text-align: center;
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
 }
 
-h1 {
+.logo a {
+    font-size: 22px;
+    font-weight: bold;
+    color: #ffffff;
+    white-space: nowrap;
+}
+
+.logo a span {
+    color: #f59e0b; /* Màu cam vàng nổi bật */
+}
+
+/* Thanh tìm kiếm */
+.search-bar {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    max-width: 380px;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 8px 14px;
+    border: 1px solid #475569;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+    font-size: 14px;
+    background-color: #0f172a;
+    color: #ffffff;
+}
+
+.search-bar button {
+    padding: 8px 16px;
+    background-color: #f59e0b;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    color: #111827;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    white-space: nowrap;
+}
+
+.search-bar button:hover {
+    background-color: #d97706;
+}
+
+/* Head-link Navigation */
+.head-link ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.head-link ul li a {
+    color: #cbd5e1;
+    font-size: 15px;
+    padding: 6px 0;
+}
+
+/* Yêu cầu mức trung bình: Rê chuột bôi đậm và đổi màu chữ */
+.head-link ul li a:hover {
+    font-weight: bold;
+    color: #f59e0b;
+}
+
+.head-link ul li a.active {
+    color: #f59e0b;
+    font-weight: bold;
+    border-bottom: 2px solid #f59e0b;
+}
+
+/* ========================================================
+   3. BỐ CỤC CHÍNH (CONTENT LAYOUT)
+   ======================================================== */
+.content-wrapper {
+    flex: 1;
+    max-width: 1240px;
+    width: 100%;
+    margin: 20px auto;
+    padding: 0 15px;
+}
+
+.main-layout {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+}
+
+/* 4. LEFT CONTENT (SIDEBAR DANH SÁCH VIDEO) */
+.left-content {
+    width: 340px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 18px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+    flex-shrink: 0;
+}
+
+.sidebar-title {
+    font-size: 18px;
     color: #0f172a;
     margin-bottom: 12px;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 8px;
+}
+
+.sort-options {
+    margin-bottom: 15px;
+    font-size: 13px;
+    color: #64748b;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.sort-options select {
+    padding: 4px 8px;
+    border: 1px solid #cbd5e1;
+    border-radius: 4px;
+    font-size: 13px;
+    outline: none;
+}
+
+.video-list {
+    list-style: none;
+}
+
+.video-item {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 14px;
+    padding: 8px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.video-item:hover {
+    background-color: #f8fafc;
+}
+
+.video-item.active-item {
+    background-color: #fef3c7;
+    border-left: 3px solid #f59e0b;
+}
+
+.video-item img {
+    width: 100px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.video-item .info h4 {
+    font-size: 14px;
+    color: #1e293b;
+    line-height: 1.3;
+    margin-bottom: 4px;
+}
+
+.video-item .info p {
+    font-size: 12px;
+    color: #64748b;
+}
+
+/* 5. RIGHT CONTENT (KHU VỰC PHÁT VIDEO) */
+.right-content {
+    flex-grow: 1;
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 22px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+.current-title {
+    font-size: 22px;
+    color: #0f172a;
+    margin-bottom: 15px;
+}
+
+/* Nhúng iframe theo tỉ lệ 16:9 chuẩn YouTube */
+.video-responsive {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+    overflow: hidden;
+    border-radius: 8px;
+    background-color: #000000;
+}
+
+.video-responsive iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.video-details {
+    margin-top: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.video-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.badge {
+    background-color: #3b82f6;
+    color: #ffffff;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.badge-sub {
+    background-color: #10b981;
+}
+
+.views {
+    font-size: 13px;
+    color: #64748b;
 }
 
 .description {
-    font-size: 16px;
-    line-height: 1.6;
+    font-size: 14px;
     color: #475569;
-    margin-bottom: 30px;
+    line-height: 1.6;
 }
 
-/* 2. Thiết lập ảnh nền (background-image) và căn giữa nội dung cho khối div */
-.featured-box {
-    /* Sử dụng linear-gradient overlay kết hợp với ảnh nền chất lượng cao từ Unsplash */
-    background-image: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)),
-                      url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1000&auto=format&fit=crop&q=80');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    
-    /* Thuộc tính căn giữa nội dung và kích thước hộp */
-    text-align: center;
-    padding: 60px 30px;
-    border-radius: 12px;
-    color: #ffffff;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+/* Local Video Player HTML5 */
+.local-player-section {
+    margin-top: 25px;
 }
 
-.featured-box h2 {
-    font-size: 26px;
-    margin-top: 0;
-    margin-bottom: 10px;
-    color: #38bdf8;
-}
-
-.featured-box p {
+.local-player-section h3 {
     font-size: 16px;
-    margin: 0;
-    color: #f1f5f9;
+    margin-bottom: 10px;
+    color: #1e293b;
+}
+
+.local-player-section video {
+    width: 100%;
+    max-height: 380px;
+    border-radius: 8px;
+    background-color: #000000;
+}
+
+/* ========================================================
+   6. FOOTER BẢN QUYỀN
+   ======================================================== */
+.footer {
+    background-color: #0f172a;
+    color: #94a3b8;
+    text-align: center;
+    padding: 20px 15px;
+    margin-top: auto;
+    font-size: 13px;
+}
+
+.footer p {
+    margin-bottom: 4px;
+}
+
+/* ========================================================
+   7. RESPONSIVE DESIGN (PC, TABLET, MOBILE)
+   ======================================================== */
+
+/* Máy tính bảng (Tablet: dưới 992px) */
+@media (max-width: 992px) {
+    .main-layout {
+        flex-direction: column;
+    }
+
+    .left-content {
+        width: 100%;
+    }
+
+    .video-item {
+        align-items: center;
+    }
+}
+
+/* Điện thoại di động (Mobile: dưới 680px) */
+@media (max-width: 680px) {
+    body {
+        padding-top: 140px; /* Tăng padding do header xuống dòng */
+    }
+
+    .header-container {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+
+    .search-bar {
+        max-width: 100%;
+    }
+
+    .head-link ul {
+        justify-content: space-around;
+        gap: 10px;
+    }
+
+    .head-link ul li a {
+        font-size: 13px;
+    }
+
+    .current-title {
+        font-size: 18px;
+    }
 }
