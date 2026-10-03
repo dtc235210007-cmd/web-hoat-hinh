@@ -1,19 +1,103 @@
-/* Định dạng cho Phần 3: External Style */
-.external-box {
-    background-color: #dcfce7;
-    padding: 16px;
-    border-radius: 8px;
-    margin-bottom: 20px;
-    border: 1px solid #86efac;
+/* 1. Element Selector: Đổi màu nền của toàn bộ trang web */
+body {
+    background-color: #f1f5f9;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 40px 15px;
+    color: #334155;
 }
 
-.external-title {
-    color: #15803d; /* Màu xanh lá cây đậm */
+/* 2. Class Selector: Khối chứa căn giữa và tạo bóng */
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* 3. ID Selector & Element Selector: Căn giữa tiêu đề h1 */
+#main-title {
+    text-align: center;
+    color: #0f172a;
     margin-top: 0;
+    font-size: 28px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-.external-text {
-    color: #166534; /* Màu xanh lá cây rừng */
+/* 4. Class Selector: Đoạn văn mô tả bản thân */
+.description {
+    line-height: 1.6;
     font-size: 16px;
-    font-style: italic;
+    text-align: justify;
+    color: #475569;
+    border-left: 4px solid #3b82f6;
+    padding-left: 12px;
+    margin-bottom: 25px;
+}
+
+/* 5. Grouping Selector: Định dạng tiêu đề nhỏ */
+h3, .hobby-list {
+    margin-bottom: 12px;
+}
+
+/* 6. Class & Descendant Selectors: Định dạng danh sách sở thích */
+.hobby-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.hobby-item {
+    padding: 10px 14px;
+    margin-bottom: 8px;
+    border-radius: 6px;
+    font-weight: 500;
+}
+
+/* Định dạng từng mục sở thích với màu sắc khác nhau */
+.item-tech {
+    background-color: #e0f2fe;
+    color: #0369a1;
+}
+
+.item-sport {
+    background-color: #dcfce7;
+    color: #15803d;
+}
+
+.item-travel {
+    background-color: #fef3c7;
+    color: #b45309;
+}
+
+/* 7. Class Selector cho nút bấm */
+.button-wrapper {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.custom-button {
+    background-color: #2563eb;
+    color: #ffffff;
+    border: none;
+    padding: 12px 28px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(37, 99, 235, 0.3);
+    transition: all 0.3s ease;
+}
+
+/* 8. Pseudo-class Selector (:hover): Hiệu ứng đổi màu và nảy nút khi di chuột */
+.custom-button:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4);
+}
+
+.custom-button:active {
+    transform: translateY(0);
 }
