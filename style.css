@@ -1,103 +1,56 @@
-/* 1. Element Selector: Đổi màu nền của toàn bộ trang web */
+/* 1. Thiết lập màu nền (background-color) cho toàn bộ trang web */
 body {
-    background-color: #f1f5f9;
+    background-color: #e2e8f0;
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
-    padding: 40px 15px;
-    color: #334155;
+    padding: 40px 20px;
+    color: #1e293b;
 }
 
-/* 2. Class Selector: Khối chứa căn giữa và tạo bóng */
-.container {
-    max-width: 600px;
+.main-container {
+    max-width: 750px;
     margin: 0 auto;
-    background-color: #ffffff;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-}
-
-/* 3. ID Selector & Element Selector: Căn giữa tiêu đề h1 */
-#main-title {
     text-align: center;
+}
+
+h1 {
     color: #0f172a;
-    margin-top: 0;
-    font-size: 28px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-/* 4. Class Selector: Đoạn văn mô tả bản thân */
-.description {
-    line-height: 1.6;
-    font-size: 16px;
-    text-align: justify;
-    color: #475569;
-    border-left: 4px solid #3b82f6;
-    padding-left: 12px;
-    margin-bottom: 25px;
-}
-
-/* 5. Grouping Selector: Định dạng tiêu đề nhỏ */
-h3, .hobby-list {
     margin-bottom: 12px;
 }
 
-/* 6. Class & Descendant Selectors: Định dạng danh sách sở thích */
-.hobby-list {
-    list-style-type: none;
-    padding-left: 0;
-}
-
-.hobby-item {
-    padding: 10px 14px;
-    margin-bottom: 8px;
-    border-radius: 6px;
-    font-weight: 500;
-}
-
-/* Định dạng từng mục sở thích với màu sắc khác nhau */
-.item-tech {
-    background-color: #e0f2fe;
-    color: #0369a1;
-}
-
-.item-sport {
-    background-color: #dcfce7;
-    color: #15803d;
-}
-
-.item-travel {
-    background-color: #fef3c7;
-    color: #b45309;
-}
-
-/* 7. Class Selector cho nút bấm */
-.button-wrapper {
-    text-align: center;
-    margin-top: 25px;
-}
-
-.custom-button {
-    background-color: #2563eb;
-    color: #ffffff;
-    border: none;
-    padding: 12px 28px;
+.description {
     font-size: 16px;
-    font-weight: bold;
-    border-radius: 8px;
-    cursor: pointer;
-    box-shadow: 0 2px 6px rgba(37, 99, 235, 0.3);
-    transition: all 0.3s ease;
+    line-height: 1.6;
+    color: #475569;
+    margin-bottom: 30px;
 }
 
-/* 8. Pseudo-class Selector (:hover): Hiệu ứng đổi màu và nảy nút khi di chuột */
-.custom-button:hover {
-    background-color: #1d4ed8;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4);
+/* 2. Thiết lập ảnh nền (background-image) và căn giữa nội dung cho khối div */
+.featured-box {
+    /* Sử dụng linear-gradient overlay kết hợp với ảnh nền chất lượng cao từ Unsplash */
+    background-image: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)),
+                      url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1000&auto=format&fit=crop&q=80');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    /* Thuộc tính căn giữa nội dung và kích thước hộp */
+    text-align: center;
+    padding: 60px 30px;
+    border-radius: 12px;
+    color: #ffffff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
-.custom-button:active {
-    transform: translateY(0);
+.featured-box h2 {
+    font-size: 26px;
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #38bdf8;
+}
+
+.featured-box p {
+    font-size: 16px;
+    margin: 0;
+    color: #f1f5f9;
 }
