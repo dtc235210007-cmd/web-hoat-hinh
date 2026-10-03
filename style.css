@@ -1,107 +1,19 @@
-/* Định dạng chung */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
-    color: #333333;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-}
-
-/* Định dạng tiêu đề */
-header {
-    background-color: #4CAF50;
-    color: white;
-    padding: 25px 20px;
-    font-size: 22px;
-}
-
-header h1 {
-    margin: 0;
-}
-
-/* Định dạng ảnh đại diện */
-.avatar {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    border: 3px solid #4CAF50;
-    margin: 20px auto 10px;
-    object-fit: cover;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-}
-
-.profile p {
-    font-size: 16px;
-    margin: 10px 0 25px;
-}
-
-/* Định dạng các phần nội dung */
-section.hobbies, section.goals {
-    background: #ffffff;
-    max-width: 600px;
-    margin: 15px auto;
-    padding: 15px 25px;
+/* Định dạng cho Phần 3: External Style */
+.external-box {
+    background-color: #dcfce7;
+    padding: 16px;
     border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    margin-bottom: 20px;
+    border: 1px solid #86efac;
 }
 
-h2 {
-    color: #2e7d32;
-    margin-top: 5px;
+.external-title {
+    color: #15803d; /* Màu xanh lá cây đậm */
+    margin-top: 0;
 }
 
-/* Định dạng danh sách */
-ul {
-    list-style-type: square;
-    text-align: left;
-    display: inline-block;
-    margin: 10px auto;
-    padding-left: 20px;
-}
-
-ul li {
-    padding: 4px 0;
-}
-
-/* Định dạng bảng thông tin liên hệ */
-table {
-    margin: 15px auto;
-    border-collapse: collapse;
-    width: 60%;
-    max-width: 480px;
-    background-color: #ffffff;
-}
-
-th, td {
-    border: 1px solid #ddd;
-    padding: 10px 15px;
-}
-
-th {
-    background-color: #4CAF50;
-    color: white;
-    width: 30%;
-    text-align: left;
-}
-
-td {
-    text-align: left;
-}
-
-td a {
-    color: #1b5e20;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-td a:hover {
-    text-decoration: underline;
-}
-
-/* Định dạng footer */
-footer {
-    margin-top: 30px;
-    padding: 25px 20px;
-    background-color: #e0e0e0;
+.external-text {
+    color: #166534; /* Màu xanh lá cây rừng */
+    font-size: 16px;
+    font-style: italic;
 }

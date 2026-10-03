@@ -3,49 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trang Web Cá Nhân</title>
+    <title>Bài tập: Nhúng CSS vào trang HTML</title>
+
+    <!-- PHẦN 3: EXTERNAL STYLE (Liên kết file CSS bên ngoài) -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- PHẦN 2: INTERNAL STYLE (Viết trong thẻ <style> ở phần <head>) -->
+    <style>
+        .internal-box {
+            background-color: #fef3c7;
+            padding: 16px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border: 1px solid #fcd34d;
+        }
+
+        .internal-title {
+            color: #d97706; /* Màu cam đậm */
+        }
+
+        .internal-text {
+            color: #92400e; /* Màu nâu cam */
+            font-size: 16px;
+        }
+    </style>
 </head>
-<body>
+<body style="font-family: Arial, sans-serif; margin: 30px; line-height: 1.6; background-color: #f8fafc;">
 
-    <header>
-        <h1>Chào mừng đến với trang web cá nhân của tôi</h1>
-    </header>
+    <h1 style="text-align: center; color: #1e293b;">Thực Hành Các Cách Nhúng CSS Vào HTML</h1>
 
-    <section class="profile">
-        <!-- Sử dụng ảnh chân dung đại diện trực tuyến để hiển thị ngay -->
-        <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=300&auto=format&fit=crop&q=80" alt="Ảnh đại diện" class="avatar">
-        <p>Xin chào! Tôi là <strong>Dang Huu Chinh</strong>, một lập trình viên yêu thích công nghệ và thể thao.</p>
-    </section>
+    <!-- ========================================== -->
+    <!-- PHẦN 1: INLINE STYLE (Trực tiếp trong thẻ) -->
+    <!-- ========================================== -->
+    <div style="background-color: #dbeafe; padding: 16px; border-radius: 8px; margin-bottom: 20px; border: 1px solid #bfdbfe;">
+        <h2 style="color: #1d4ed8; margin-top: 0;">1. Tiêu đề sử dụng Inline Style</h2>
+        <p style="color: #1e40af; font-size: 16px; font-weight: bold;">
+            Đoạn văn này được định dạng màu sắc trực tiếp qua thuộc tính style inline trên thẻ p.
+        </p>
+    </div>
 
-    <section class="hobbies">
-        <h2>Sở thích</h2>
-        <ul>
-            <li>Đọc sách & nghiên cứu công nghệ</li>
-            <li>Chơi bóng đá và rèn luyện thể thao</li>
-            <li>Lập trình phần mềm</li>
-            <li>Du lịch & khám phá địa điểm mới</li>
-        </ul>
-    </section>
+    <!-- ========================================== -->
+    <!-- PHẦN 2: INTERNAL STYLE (Định dạng từ thẻ style) -->
+    <!-- ========================================== -->
+    <div class="internal-box">
+        <h2 class="internal-title" style="margin-top: 0;">2. Tiêu đề sử dụng Internal Style</h2>
+        <p class="internal-text">
+            Đoạn văn này nhận màu sắc và phông chữ từ bộ chọn class được khai báo trong thẻ &lt;style&gt; ở phần &lt;head&gt;.
+        </p>
+    </div>
 
-    <section class="goals">
-        <h2>Mục tiêu học tập</h2>
-        <p>Tôi muốn trở thành một lập trình viên chuyên nghiệp, làm chủ các công nghệ web và xây dựng các sản phẩm thực tế hữu ích.</p>
-    </section>
-
-    <footer>
-        <h2>Thông tin liên hệ</h2>
-        <table>
-            <tr>
-                <th>Email</th>
-                <td>chinhdang@example.com</td>
-            </tr>
-            <tr>
-                <th>GitHub</th>
-                <td><a href="https://github.com/dtc235210007-cmd/web-hoat-hinh" target="_blank">github.com/dtc235210007-cmd</a></td>
-            </tr>
-        </table>
-    </footer>
+    <!-- ========================================== -->
+    <!-- PHẦN 3: EXTERNAL STYLE (Từ file style.css) -->
+    <!-- ========================================== -->
+    <div class="external-box">
+        <h2 class="external-title">3. Tiêu đề sử dụng External Style</h2>
+        <p class="external-text">
+            Đoạn văn này được định dạng màu sắc từ file stylesheet độc lập bên ngoài (style.css).
+        </p>
+    </div>
 
 </body>
 </html>
