@@ -3,81 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thực hành định kiểu Bảng trong CSS</title>
-    <style>
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            margin: 40px;
-            background-color: #f8fafc;
-        }
-
-        h2 {
-            text-align: center;
-            color: #1e293b;
-            margin-bottom: 20px;
-        }
-
-        /* Định kiểu bảng hoàn chỉnh theo bài thực hành */
-        table {
-            width: 100%;                  /* Chiều rộng chiếm 100% */
-            border-collapse: collapse;    /* Gộp đường viền liền kề */
-            background-color: #ffffff;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-        }
-
-        table, th, td {
-            border: 1px solid #333333;   /* Đường viền liền màu đen */
-        }
-
-        th {
-            height: 50px;                 /* Chiều cao hàng tiêu đề */
-            background-color: #333333;    /* Nền tối cho tiêu đề */
-            color: #ffffff;               /* Chữ màu trắng */
-            text-align: left;             /* Căn chỉnh nội dung về bên trái */
-            padding: 15px;                /* Khoảng cách đệm bên trong */
-            font-size: 16px;
-        }
-
-        td {
-            height: 60px;                 /* Chiều cao ô dữ liệu */
-            vertical-align: bottom;       /* Căn chỉnh nội dung xuống dưới */
-            padding: 15px;                /* Khoảng cách đệm bên trong */
-            background-color: #f2f2f2;    /* Nền xám nhạt */
-            color: #333333;               /* Màu chữ đậm */
-        }
-
-        /* Thêm hiệu ứng di chuột để bảng sinh động hơn */
-        tr:hover td {
-            background-color: #e2e8f0;
-        }
-    </style>
+    <title>Trang Web Cá Nhân</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <h2>Danh Sách Học Viên - Thực Hành CSS Table</h2>
+    <header>
+        <h1>Chào mừng đến với trang web cá nhân của tôi</h1>
+    </header>
 
-    <table>
-        <tr>
-            <th>Họ tên</th>
-            <th>Tuổi</th>
-            <th>Lớp</th>
-        </tr>
-        <tr>
-            <td>Nguyễn Văn A</td>
-            <td>20</td>
-            <td>Web</td>
-        </tr>
-        <tr>
-            <td>Trần Thị B</td>
-            <td>21</td>
-            <td>Web</td>
-        </tr>
-        <tr>
-            <td>Lê Văn C</td>
-            <td>22</td>
-            <td>Web</td>
-        </tr>
-    </table>
+    <section class="profile">
+        <!-- Sử dụng ảnh chân dung đại diện trực tuyến để hiển thị ngay -->
+        <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=300&auto=format&fit=crop&q=80" alt="Ảnh đại diện" class="avatar">
+        <p>Xin chào! Tôi là <strong>Dang Huu Chinh</strong>, một lập trình viên yêu thích công nghệ và thể thao.</p>
+    </section>
+
+    <section class="hobbies">
+        <h2>Sở thích</h2>
+        <ul>
+            <li>Đọc sách & nghiên cứu công nghệ</li>
+            <li>Chơi bóng đá và rèn luyện thể thao</li>
+            <li>Lập trình phần mềm</li>
+            <li>Du lịch & khám phá địa điểm mới</li>
+        </ul>
+    </section>
+
+    <section class="goals">
+        <h2>Mục tiêu học tập</h2>
+        <p>Tôi muốn trở thành một lập trình viên chuyên nghiệp, làm chủ các công nghệ web và xây dựng các sản phẩm thực tế hữu ích.</p>
+    </section>
+
+    <footer>
+        <h2>Thông tin liên hệ</h2>
+        <table>
+            <tr>
+                <th>Email</th>
+                <td>chinhdang@example.com</td>
+            </tr>
+            <tr>
+                <th>GitHub</th>
+                <td><a href="https://github.com/dtc235210007-cmd/web-hoat-hinh" target="_blank">github.com/dtc235210007-cmd</a></td>
+            </tr>
+        </table>
+    </footer>
 
 </body>
 </html>

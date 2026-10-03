@@ -1,108 +1,107 @@
-/* Thiết lập chung cho giao diện */
+/* Định dạng chung */
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #f1f5f9;
-    margin: 0;
-    padding: 30px 20px;
-    color: #1e293b;
-}
-
-h1 {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333333;
     text-align: center;
-    color: #0f172a;
-    margin-bottom: 30px;
+    margin: 0;
+    padding: 0;
 }
 
-.card {
-    background-color: #ffffff;
-    max-width: 650px;
-    margin: 0 auto 24px auto;
-    padding: 20px 25px;
+/* Định dạng tiêu đề */
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 25px 20px;
+    font-size: 22px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+/* Định dạng ảnh đại diện */
+.avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #4CAF50;
+    margin: 20px auto 10px;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.profile p {
+    font-size: 16px;
+    margin: 10px 0 25px;
+}
+
+/* Định dạng các phần nội dung */
+section.hobbies, section.goals {
+    background: #ffffff;
+    max-width: 600px;
+    margin: 15px auto;
+    padding: 15px 25px;
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
 }
 
-.card h2 {
-    font-size: 18px;
-    color: #2563eb;
-    margin-top: 0;
-    margin-bottom: 12px;
-    border-bottom: 1px solid #e2e8f0;
-    padding-bottom: 8px;
+h2 {
+    color: #2e7d32;
+    margin-top: 5px;
 }
 
-/* 2. Dấu hình vuông */
-ul.list-square {
+/* Định dạng danh sách */
+ul {
     list-style-type: square;
+    text-align: left;
+    display: inline-block;
+    margin: 10px auto;
+    padding-left: 20px;
 }
 
-/* 3. Đánh số La Mã hoa */
-ol.list-roman {
-    list-style-type: upper-roman;
+ul li {
+    padding: 4px 0;
 }
 
-/* 4. Dùng hình ảnh (icon svg checklist) làm bullet */
-ul.list-image {
-    list-style-image: url('https://img.icons8.com/ios-glyphs/16/000000/checkmark--v1.png');
+/* Định dạng bảng thông tin liên hệ */
+table {
+    margin: 15px auto;
+    border-collapse: collapse;
+    width: 60%;
+    max-width: 480px;
+    background-color: #ffffff;
 }
 
-/* 5. Vị trí dấu đánh dấu */
-ul.list-outside {
-    list-style-position: outside;
-    background-color: #f8fafc;
-    border: 1px dashed #cbd5e1;
-    padding: 10px 30px;
-}
-
-ul.list-inside {
-    list-style-position: inside;
-    background-color: #f8fafc;
-    border: 1px dashed #cbd5e1;
+th, td {
+    border: 1px solid #ddd;
     padding: 10px 15px;
 }
 
-/* 6. Thuộc tính rút gọn list-style: [type] [position] */
-ul.list-shorthand {
-    list-style: circle inside;
+th {
+    background-color: #4CAF50;
+    color: white;
+    width: 30%;
+    text-align: left;
 }
 
-/* 7. Định kiểu màu sắc, padding, margin */
-ul.list-colored {
-    background-color: #eff6ff;
-    padding: 16px 20px 16px 36px;
-    border-radius: 6px;
+td {
+    text-align: left;
 }
 
-ul.list-colored li {
-    color: #1d4ed8;
-    margin-bottom: 8px;
-    font-weight: 600;
+td a {
+    color: #1b5e20;
+    text-decoration: none;
+    font-weight: bold;
 }
 
-/* 8. Bài tập tổng hợp: Lộ trình học lập trình Web */
-ul.roadmap {
-    list-style: square inside;
-    background-color: #0f172a;
-    padding: 20px;
-    border-radius: 8px;
-    margin: 0;
+td a:hover {
+    text-decoration: underline;
 }
 
-ul.roadmap li {
-    color: #38bdf8;
-    padding: 10px 12px;
-    margin-bottom: 8px;
-    background-color: #1e293b;
-    border-radius: 4px;
-    font-size: 15px;
-    transition: background-color 0.2s;
-}
-
-ul.roadmap li:last-child {
-    margin-bottom: 0;
-}
-
-ul.roadmap li:hover {
-    background-color: #334155;
-    color: #ffffff;
+/* Định dạng footer */
+footer {
+    margin-top: 30px;
+    padding: 25px 20px;
+    background-color: #e0e0e0;
 }
