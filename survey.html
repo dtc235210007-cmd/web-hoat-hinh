@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Market Research Survey</title>
+    <style>
+        body {
+            font-family: "Lucida Grande", "Lucida Sans Unicode", Tahoma, sans-serif;
+            background-color: #f7f9fa;
+            margin: 0;
+            padding: 30px 15px;
+            color: #333333;
+        }
+
+        .survey-container {
+            max-width: 680px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border: 1px solid #dcdcdc;
+            border-top: 5px solid #205493;
+            border-radius: 4px;
+            padding: 30px;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+        }
+
+        h2 {
+            margin-top: 0;
+            margin-bottom: 6px;
+            color: #222;
+        }
+
+        .subtitle {
+            margin-top: 0;
+            margin-bottom: 24px;
+            color: #666;
+            font-size: 14px;
+            border-bottom: 1px dashed #ccc;
+            padding-bottom: 15px;
+        }
+
+        .field-group {
+            margin-bottom: 22px;
+        }
+
+        .field-label {
+            display: block;
+            font-weight: bold;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+
+        select {
+            padding: 6px 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            font-size: 14px;
+            min-width: 200px;
+        }
+
+        /* Bảng đánh giá Matrix */
+        table.matrix-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 8px;
+            font-size: 13px;
+        }
+
+        table.matrix-table th,
+        table.matrix-table td {
+            border: 1px solid #e0e0e0;
+            padding: 8px;
+            text-align: center;
+        }
+
+        table.matrix-table th {
+            background-color: #f1f3f5;
+            font-weight: bold;
+        }
+
+        table.matrix-table td:first-child {
+            text-align: left;
+            font-weight: 500;
+        }
+
+        table.matrix-table tr:nth-child(even) {
+            background-color: #fafafa;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            font-family: inherit;
+            font-size: 14px;
+            resize: vertical;
+        }
+
+        .btn-submit {
+            background-color: #205493;
+            color: #ffffff;
+            font-size: 15px;
+            font-weight: bold;
+            border: none;
+            padding: 10px 24px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .btn-submit:hover {
+            background-color: #112e51;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="survey-container">
+        <h2>Market Research Survey</h2>
+        <p class="subtitle">Please take a few moments to complete this satisfaction survey.</p>
+
+        <form action="#" method="POST">
+
+            <!-- 1. Độ tuổi -->
+            <div class="field-group">
+                <label class="field-label" for="age">What is your age range?</label>
+                <select id="age" name="age_range">
+                    <option value="18-24">18 - 24</option>
+                    <option value="25-34" selected>25 - 34</option>
+                    <option value="35-50">35 - 50</option>
+                    <option value="50+">50+</option>
+                </select>
+            </div>
+
+            <!-- 2. Thu nhập hàng năm -->
+            <div class="field-group">
+                <label class="field-label" for="income">What is your yearly income?</label>
+                <select id="income" name="yearly_income">
+                    <option value="0-25k">$0 - $25,000</option>
+                    <option value="25k-50k">$25,001 - $50,000</option>
+                    <option value="50k-100k">$50,001 - $100,000</option>
+                    <option value="100k+">$100,000+</option>
+                </select>
+            </div>
+
+            <!-- 3. Giới tính -->
+            <div class="field-group">
+                <label class="field-label">Gender identity:</label>
+                <label><input type="radio" name="gender" value="male" checked> Male</label>&nbsp;&nbsp;
+                <label><input type="radio" name="gender" value="female"> Female</label>&nbsp;&nbsp;
+                <label><input type="radio" name="gender" value="other"> Non-binary / Other</label>
+            </div>
+
+            <!-- 4. Ma trận mức độ hài lòng (Matrix Rating) -->
+            <div class="field-group">
+                <label class="field-label">How would you rate our services?</label>
+                <table class="matrix-table">
+                    <thead>
+                        <tr>
+                            <th>Service Aspect</th>
+                            <th>Very Poor</th>
+                            <th>Poor</th>
+                            <th>Neutral</th>
+                            <th>Good</th>
+                            <th>Excellent</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Quality of products</td>
+                            <td><input type="radio" name="rate_quality" value="1"></td>
+                            <td><input type="radio" name="rate_quality" value="2"></td>
+                            <td><input type="radio" name="rate_quality" value="3"></td>
+                            <td><input type="radio" name="rate_quality" value="4"></td>
+                            <td><input type="radio" name="rate_quality" value="5" checked></td>
+                        </tr>
+                        <tr>
+                            <td>Customer support</td>
+                            <td><input type="radio" name="rate_support" value="1"></td>
+                            <td><input type="radio" name="rate_support" value="2"></td>
+                            <td><input type="radio" name="rate_support" value="3"></td>
+                            <td><input type="radio" name="rate_support" value="4" checked></td>
+                            <td><input type="radio" name="rate_support" value="5"></td>
+                        </tr>
+                        <tr>
+                            <td>Value for price</td>
+                            <td><input type="radio" name="rate_value" value="1"></td>
+                            <td><input type="radio" name="rate_value" value="2"></td>
+                            <td><input type="radio" name="rate_value" value="3"></td>
+                            <td><input type="radio" name="rate_value" value="4"></td>
+                            <td><input type="radio" name="rate_value" value="5" checked></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- 5. Tần suất mua sắm -->
+            <div class="field-group">
+                <label class="field-label">How often do you buy from us?</label>
+                <label><input type="radio" name="frequency" value="daily"> Daily</label><br>
+                <label><input type="radio" name="frequency" value="weekly" checked> Weekly</label><br>
+                <label><input type="radio" name="frequency" value="monthly"> Monthly</label><br>
+                <label><input type="radio" name="frequency" value="rarely"> Rarely</label>
+            </div>
+
+            <!-- 6. Ý kiến đóng góp -->
+            <div class="field-group">
+                <label class="field-label" for="comments">What can we do to improve?</label>
+                <textarea id="comments" name="comments" rows="4" placeholder="Your feedback is very important to us..."></textarea>
+            </div>
+
+            <!-- Nút gửi -->
+            <button type="submit" class="btn-submit">Submit Survey</button>
+
+        </form>
+    </div>
+
+</body>
+</html>
