@@ -3,95 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thực hành Danh sách trong CSS</title>
-    <!-- Liên kết file CSS bên ngoài -->
-    <link rel="stylesheet" href="style.css">
+    <title>Thực hành định kiểu Bảng trong CSS</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 40px;
+            background-color: #f8fafc;
+        }
+
+        h2 {
+            text-align: center;
+            color: #1e293b;
+            margin-bottom: 20px;
+        }
+
+        /* Định kiểu bảng hoàn chỉnh theo bài thực hành */
+        table {
+            width: 100%;                  /* Chiều rộng chiếm 100% */
+            border-collapse: collapse;    /* Gộp đường viền liền kề */
+            background-color: #ffffff;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        table, th, td {
+            border: 1px solid #333333;   /* Đường viền liền màu đen */
+        }
+
+        th {
+            height: 50px;                 /* Chiều cao hàng tiêu đề */
+            background-color: #333333;    /* Nền tối cho tiêu đề */
+            color: #ffffff;               /* Chữ màu trắng */
+            text-align: left;             /* Căn chỉnh nội dung về bên trái */
+            padding: 15px;                /* Khoảng cách đệm bên trong */
+            font-size: 16px;
+        }
+
+        td {
+            height: 60px;                 /* Chiều cao ô dữ liệu */
+            vertical-align: bottom;       /* Căn chỉnh nội dung xuống dưới */
+            padding: 15px;                /* Khoảng cách đệm bên trong */
+            background-color: #f2f2f2;    /* Nền xám nhạt */
+            color: #333333;               /* Màu chữ đậm */
+        }
+
+        /* Thêm hiệu ứng di chuột để bảng sinh động hơn */
+        tr:hover td {
+            background-color: #e2e8f0;
+        }
+    </style>
 </head>
 <body>
 
-    <h1>Thực Hành Định Kiểu Danh Sách Bằng CSS</h1>
+    <h2>Danh Sách Học Viên - Thực Hành CSS Table</h2>
 
-    <!-- Mục 2: list-style-type vuông -->
-    <div class="card">
-        <h2>2. Kiểu đánh dấu hình vuông (Square)</h2>
-        <ul class="list-square">
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>Git</li>
-        </ul>
-    </div>
-
-    <!-- Mục 3: list-style-type số La Mã hoa -->
-    <div class="card">
-        <h2>3. Kiểu đánh số La Mã viết hoa (Upper Roman)</h2>
-        <ol class="list-roman">
-            <li>Học HTML</li>
-            <li>Học CSS</li>
-            <li>Học JavaScript</li>
-            <li>Học Git</li>
-        </ol>
-    </div>
-
-    <!-- Mục 4: list-style-image (dùng icon SVG/ảnh online làm bullet) -->
-    <div class="card">
-        <h2>4. Dùng hình ảnh làm dấu đánh dấu</h2>
-        <ul class="list-image">
-            <li>Visual Studio Code</li>
-            <li>Google Chrome</li>
-            <li>GitHub</li>
-            <li>Git</li>
-        </ul>
-    </div>
-
-    <!-- Mục 5: list-style-position outside và inside -->
-    <div class="card">
-        <h2>5. Vị trí dấu đánh dấu (Outside vs Inside)</h2>
-        <p><strong>Outside (mặc định - dấu nằm ngoài khối):</strong></p>
-        <ul class="list-outside">
-            <li>Mục danh sách A</li>
-            <li>Mục danh sách B</li>
-        </ul>
-
-        <p><strong>Inside (dấu thụt vào trong cùng khối chữ):</strong></p>
-        <ul class="list-inside">
-            <li>Mục danh sách A</li>
-            <li>Mục danh sách B</li>
-        </ul>
-    </div>
-
-    <!-- Mục 6: Thuộc tính rút gọn list-style -->
-    <div class="card">
-        <h2>6. Thuộc tính rút gọn list-style</h2>
-        <ul class="list-shorthand">
-            <li>Kiểu đánh dấu circle</li>
-            <li>Vị trí inside</li>
-            <li>Gọn gàng trong 1 dòng lệnh</li>
-        </ul>
-    </div>
-
-    <!-- Mục 7: Danh sách với màu sắc, margin, padding -->
-    <div class="card">
-        <h2>7. Danh sách với màu sắc và khoảng cách</h2>
-        <ul class="list-colored">
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>Python</li>
-        </ul>
-    </div>
-
-    <!-- Mục 8: Bài tập tổng hợp: Lộ trình học lập trình Web -->
-    <div class="card">
-        <h2>8. Lộ trình học lập trình Web (Tổng hợp)</h2>
-        <ul class="roadmap">
-            <li>HTML: Nền tảng xây dựng khung cấu trúc website</li>
-            <li>CSS: Định dạng giao diện, bố cục và màu sắc thẩm mỹ</li>
-            <li>JavaScript: Thêm tính tương tác linh hoạt cho ứng dụng</li>
-            <li>Git: Quản lý phiên bản mã nguồn chuyên nghiệp</li>
-            <li>GitHub: Lưu trữ, làm việc nhóm và chia sẻ dự án</li>
-        </ul>
-    </div>
+    <table>
+        <tr>
+            <th>Họ tên</th>
+            <th>Tuổi</th>
+            <th>Lớp</th>
+        </tr>
+        <tr>
+            <td>Nguyễn Văn A</td>
+            <td>20</td>
+            <td>Web</td>
+        </tr>
+        <tr>
+            <td>Trần Thị B</td>
+            <td>21</td>
+            <td>Web</td>
+        </tr>
+        <tr>
+            <td>Lê Văn C</td>
+            <td>22</td>
+            <td>Web</td>
+        </tr>
+    </table>
 
 </body>
 </html>
